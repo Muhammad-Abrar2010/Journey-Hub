@@ -3,7 +3,7 @@ import { useContext } from "react";
 import toast from "react-hot-toast";
 import { AuthContext } from "../../Firebase/Firebaseprovider";
 import "react-tooltip/dist/react-tooltip.css";
-import { Tooltip } from 'react-tooltip'
+import { Tooltip } from "react-tooltip";
 const Headers = () => {
   const { user, logout } = useContext(AuthContext);
   const handleSignOut = () => {
@@ -34,7 +34,7 @@ const Headers = () => {
             </div>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+              className="menu menu-sm dropdown-content mt-3 z-[999] p-2 shadow bg-base-100 rounded-box w-52"
             >
               <li>
                 <NavLink to={"/TouristsSpot"}>TouristsSpot</NavLink>
@@ -66,18 +66,34 @@ const Headers = () => {
         </div>
         <div className="navbar-end">
           {user ? (
-            <div className="avatar">
-              <div className="w-12 rounded-full">
-                <a href="#" className="my-anchor-element">
-                  {" "}
-                  <img
-                    src={user.photoURL}
-                    alt={user.displayName}
-                    data-tooltip-content={user.displayName}
-                  />
-                </a>
+            <div
+              data-tooltip-id="my-tooltip"
+              data-tooltip-content={user.displayName}
+              data-tooltip-place="bottom"
+            >
+              {" "}
+              <div className="dropdown dropdown-end">
+                <div
+                  tabIndex={0}
+                  role="button"
+                  className="btn btn-ghost btn-circle avatar"
+                >
+                  <div className="w-10 rounded-full .my-anchor-element">
+                    {" "}
+                    <img alt={user.displayName} src={user.photoURL} />
+                  </div>
+                </div>
+                <ul
+                  tabIndex={0}
+                  className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52"
+                >
+                  <li>
+                    <button className="btn-red btn" onClick={handleSignOut}>
+                      Logout
+                    </button>
+                  </li>
+                </ul>
               </div>
-            
             </div>
           ) : (
             <div className="flex gap-4">
@@ -91,9 +107,7 @@ const Headers = () => {
           )}
         </div>
       </div>
-      <Tooltip anchorSelect=".my-anchor-element" place="bottom">
-                {user.displayName}
-              </Tooltip>{" "}
+      <Tooltip id="my-tooltip" />
     </div>
   );
 };
