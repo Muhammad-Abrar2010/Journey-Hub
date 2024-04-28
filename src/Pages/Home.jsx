@@ -1,7 +1,9 @@
+import { Slider } from "./Home/Slider";
+
 const Home = () => {
   return (
     <div>
-      <h1 className="text-xl">Hello</h1>
+      <Slider></Slider>
     </div>
   );
 };
