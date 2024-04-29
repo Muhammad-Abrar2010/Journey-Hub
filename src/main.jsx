@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import Home from "./Pages/Home.jsx";
+import Home from "./Pages/Home/Home.jsx";
 import Root from "./Root/Root.jsx";
 import TouristsSpot from "./Pages/TouristsSpot.jsx";
 import Firebaseprovider from "./Firebase/Firebaseprovider.jsx";
@@ -17,8 +17,12 @@ const router = createBrowserRouter([
     path: "/",
     element: <Root></Root>,
     children: [
-      { path: "/", element: <Home></Home> },
-      { path: "TouristsSpot", element: <TouristsSpot></TouristsSpot> },
+      { path: "/", element: <Home></Home>, loader:()=> fetch("http://localhost:5000/TouristSpots") },
+      {
+        path: "TouristsSpot",
+        element: <TouristsSpot></TouristsSpot>,
+        loader: () => fetch("http://localhost:5000/TouristSpots"),
+      },
       { path: "Login", element: <Login></Login> },
       {
         path: "Register",
