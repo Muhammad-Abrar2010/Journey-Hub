@@ -1,5 +1,3 @@
-
-
 import toast from "react-hot-toast";
 import { useLoaderData } from "react-router-dom";
 
@@ -7,6 +5,7 @@ const UpdateTouristsSpot = () => {
   const TouristsSpot = useLoaderData();
 
   const {
+    _id,
     imageUrl,
     TouristsSpotName,
     countryName,
@@ -16,10 +15,8 @@ const UpdateTouristsSpot = () => {
     Seasonality,
     travelTime,
     totalVisitorsPerYear,
-    displayName,
-    userMail,
-    photoURL,
   } = TouristsSpot;
+  console.log(_id);
 
   const handleAddSpot = (e) => {
     e.preventDefault();
@@ -33,7 +30,6 @@ const UpdateTouristsSpot = () => {
     const travelTime = e.target.averageCost.value;
     const totalVisitorsPerYear = e.target.totalVisitorsPerYear.value;
 
-
     const UpdatewTouristSpot = {
       imageUrl,
       TouristsSpotName,
@@ -44,9 +40,6 @@ const UpdateTouristsSpot = () => {
       Seasonality,
       travelTime,
       totalVisitorsPerYear,
-      displayName,
-      userMail,
-      photoURL
     };
 
     if (countryName === "Select Country") {
@@ -59,15 +52,18 @@ const UpdateTouristsSpot = () => {
       return;
     }
 
-    // fetch("http://localhost:5000/TouristSpots",{
-    //   method:"POST",
-    //   headers:{
-    //     "content-type":"application/json"
-    //   },
-    //   body: JSON.stringify(newTouristSpot)
-    // })
-    //   .then((res) => res.json())
-    //   .then((data) => {console.log(data);toast.success("successfully added new tourists Spot")});
+    fetch(`http://localhost:5000/TouristSpots/${_id}`, {
+      method: "PUT",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(UpdatewTouristSpot),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        toast.success("successfully added new tourists Spot");
+      });
   };
   return (
     <div className="m-auto p-auto w-full sm:w-1/2 mb-8 sm:mb-0">
