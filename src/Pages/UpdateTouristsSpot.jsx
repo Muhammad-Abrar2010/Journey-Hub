@@ -52,7 +52,7 @@ const UpdateTouristsSpot = () => {
       return;
     }
 
-    fetch(`http://localhost:5000/TouristSpots/${_id}`, {
+    fetch(`https://journey-hub-backend.vercel.app/TouristSpots/${_id}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",

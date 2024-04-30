@@ -42,13 +42,13 @@ const Headers = () => {
               <li>
                 <NavLink to={"/"}>Home</NavLink>
               </li>
-              <li>
+           {user &&   <div> <li>
                 <NavLink to={"/AddTouristsSpot"}>AddTouristsSpot</NavLink>
               </li>
 
               <li>
                 <NavLink to={"/Mylist"}>Mylist</NavLink>
-              </li>
+              </li></div>}
               <li>
                 <div className="lg:hidden md:hidden">
                   <label className="swap swap-rotate">

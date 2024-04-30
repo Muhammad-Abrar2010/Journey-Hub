@@ -3,13 +3,15 @@ import { Link } from "react-router-dom";
 
 const TouristsSpot = () => {
   const [data, setData] = useState([]);
-  // const [sortBy, setSortBy] = useState("");
 
   useEffect(() => {
-    fetch("http://localhost:5000/TouristSpots")
+    fetch("https://journey-hub-backend.vercel.app/TouristSpots", {
+    })
       .then((res) => res.json())
       .then((data) => setData(data));
   }, []);
+
+
 
   const handleSort = (sortBy) => {
     console.log("Sorting by:", sortBy);

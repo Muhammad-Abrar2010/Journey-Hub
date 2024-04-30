@@ -36,22 +36,35 @@ const router = createBrowserRouter([
       },
       {
         path: "AddTouristsSpot",
-        element: <AddTouristsSpot></AddTouristsSpot>,
+        element: <PrivatePage><AddTouristsSpot></AddTouristsSpot></PrivatePage>,
       },
       {
         path: "TouristSpot/:id",
-        element: <TouristsSpotDetails></TouristsSpotDetails>,
-        loader: () => fetch("http://localhost:5000/TouristSpots"),
+        element: (
+          <PrivatePage>
+            {" "}
+            <TouristsSpotDetails></TouristsSpotDetails>
+          </PrivatePage>
+        ),
+        loader: () => fetch("https://journey-hub-backend.vercel.app/TouristSpots"),
       },
       {
         path: "UpdateTouristsSpot/:id",
-        element: <PrivatePage><UpdateTouristsSpot></UpdateTouristsSpot></PrivatePage>,
+        element: (
+          <PrivatePage>
+            <UpdateTouristsSpot></UpdateTouristsSpot>
+          </PrivatePage>
+        ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/TouristSpots/${params.id}`),
+          fetch(`https://journey-hub-backend.vercel.app/TouristSpots/${params.id}`),
       },
       {
         path: "/Mylist",
-        element: <PrivatePage><Mylist></Mylist></PrivatePage>,
+        element: (
+          <PrivatePage>
+            <Mylist></Mylist>
+          </PrivatePage>
+        ),
       },
     ],
   },

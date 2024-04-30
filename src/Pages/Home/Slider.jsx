@@ -5,28 +5,28 @@ export const Slider = () => {
   const sliders = [
     {
       img: "https://source.unsplash.com/1200x540/?nature",
-      title: "Escape 1",
-      des: "A Symphony of Tranquility. Experience the perfect blend of relaxation and excitement.",
+      title: "Nature",
+      des: "Journey With us and make deep relation with nature",
     },
     {
       img: "https://source.unsplash.com/1200x540/?hill",
-      title: "Escape 2",
-      des: "A Symphony of Tranquility. Experience the perfect blend of relaxation and excitement.",
+      title: "hill",
+      des: "Embark on a journey through the hills and forge profound connections with nature",
     },
     {
       img: "https://source.unsplash.com/1200x540/?mountain",
-      title: "Escape 3",
-      des: "A Symphony of Tranquility. Experience the perfect blend of relaxation and excitement.",
+      title: "mountain",
+      des: "Embark on a mountainous journey and cultivate deep connections with nature's grandeur.",
     },
     {
       img: "https://source.unsplash.com/1200x540/?river",
-      title: "Escape 4",
-      des: "A Symphony of Tranquility. Experience the perfect blend of relaxation and excitement.",
+      title: "river",
+      des: "Embark on a river journey and weave profound connections with the flowing essence of nature.",
     },
     {
       img: "https://source.unsplash.com/1200x540/?sea",
-      title: "Escape 5",
-      des: "A Symphony of Tranquility. Experience the perfect blend of relaxation and excitement.",
+      title: "sea",
+      des: "Embark on a sea voyage and cultivate deep connections with the vast expanse of nature's embrace.",
     },
   ];
   // if you don't want to change the slider automatically then you can just remove the useEffect
