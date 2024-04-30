@@ -1,9 +1,13 @@
+import { Fade } from "react-awesome-reveal";
+
 
 const WhyChooseUs = () => {
+
   return (
     <div className="bg-white py-16 m-4">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-semibold text-gray-800 mb-8">Why Choose Us</h2>
+<Fade>        <h2 className="text-3xl font-semibold text-gray-800 mb-8">Why Choose Us{' '}</h2>    
+</Fade>  
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div className="flex flex-col items-center">
             <div className="bg-gray-200 rounded-full p-6 mb-4">

@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Roll } from "react-awesome-reveal";
 
 export const Slider = () => {
   const [currentSlider, setCurrentSlider] = useState(0);
@@ -48,14 +49,14 @@ export const Slider = () => {
         style={{ backgroundImage: `url(${sliders[currentSlider].img})` }}
       >
         {/* text container here */}
-        <div className="drop-shadow-lg text-white text-center px-5">
+       <Roll> <div className="drop-shadow-lg text-white text-center px-5">
           <h1 className="text-xl lg:text-3xl font-semibold mb-3">
             {sliders[currentSlider].title}
           </h1>
           <p className="text-sm md:text-base lg:text-lg">
             {sliders[currentSlider].des}
           </p>
-        </div>
+        </div></Roll>
       </div>
       {/* slider container */}
       <div className="flex justify-center items-center gap-3 p-2">
