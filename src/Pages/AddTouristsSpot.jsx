@@ -19,6 +19,7 @@ const AddTouristsSpot = () => {
 
     const displayName = user.displayName;
     const userMail = user.email||"not available";
+    const photoURL = user.photoURL||user.displayName;
 
     const newTouristSpot = {
       imageUrl,
@@ -32,6 +33,7 @@ const AddTouristsSpot = () => {
       totalVisitorsPerYear,
       displayName,
       userMail,
+      photoURL
     };
 
     if (countryName === "Select Country") {
@@ -62,7 +64,7 @@ const AddTouristsSpot = () => {
       <div>
         <form action="" className="grid gap-2" onSubmit={handleAddSpot}>
           <div className="flex">
-            <input
+            <input 
               className="flex h-10 w-full rounded-md border px-3 py-2 text-sm focus:outline-none"
               placeholder="Image URL"
               type="text"

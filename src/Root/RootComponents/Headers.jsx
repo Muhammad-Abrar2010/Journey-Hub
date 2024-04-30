@@ -54,7 +54,6 @@ const Headers = () => {
                     className="theme-controller"
                     value="forest"
                   />
-
                   {/* sun icon */}
                   <svg
                     className="swap-off fill-current w-10 h-10"
