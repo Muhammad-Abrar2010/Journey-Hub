@@ -1,6 +1,7 @@
 import { Slider } from "./Slider";
 import TouristsSpot from "../TouristsSpot";
 import Aboutus from "./Aboutus";
+import WhyChooseUs from "./WhyChooseUs";
 
 const Home = () => {
   return (
@@ -10,8 +11,10 @@ const Home = () => {
       <br />
 
 
-      
+
       <Aboutus></Aboutus>
+      <br />
+      <WhyChooseUs></WhyChooseUs>
     </div>
 
 
