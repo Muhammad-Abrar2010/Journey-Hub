@@ -44,7 +44,8 @@ const router = createBrowserRouter([
       },
       {
         path:"UpdateTouristsSpot/:id",
-        element: <UpdateTouristsSpot></UpdateTouristsSpot>
+        element: <UpdateTouristsSpot></UpdateTouristsSpot>,
+        loader: ({params})=>fetch(`http://localhost:5000/TouristSpots/${params.id}`)
       },
       {
         path:"/Mylist"

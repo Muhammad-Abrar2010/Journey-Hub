@@ -45,9 +45,7 @@ const Headers = () => {
               <li>
                 <NavLink to={"/AddTouristsSpot"}>AddTouristsSpot</NavLink>
               </li>
-              <li>
-                <NavLink to={"/UpdateTouristsSpot/:id"}>UpdateTouristsSpot</NavLink>
-              </li>
+
               <li>
                 <NavLink to={"/Mylist"}>Mylist</NavLink>
               </li>
@@ -97,9 +95,7 @@ const Headers = () => {
             <li>
               <NavLink to={"/AddTouristsSpot"}>AddTouristsSpot</NavLink>
             </li>
-            <li>
-              <NavLink to={"/UpdateTouristsSpot/:id"}>UpdateTouristsSpot</NavLink>
-            </li>
+
             <li>
               <NavLink to={"/Mylist"}>Mylist</NavLink>
             </li>
