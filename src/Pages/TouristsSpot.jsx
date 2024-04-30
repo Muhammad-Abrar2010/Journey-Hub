@@ -1,18 +1,38 @@
 import { useEffect, useState } from "react";
-import { Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const TouristsSpot = () => {
-const [data, setData] = useState([]);
+  const [data, setData] = useState([]);
+  // const [sortBy, setSortBy] = useState("");
 
-useEffect(() => {
+  useEffect(() => {
     fetch("http://localhost:5000/TouristSpots")
       .then((res) => res.json())
       .then((data) => setData(data));
-  });
+  }, []);
 
-  
+  const handleSort = (sortBy) => {
+    console.log("Sorting by:", sortBy);
+    let sortedData = [...data];
+    if (sortBy === "asc") {
+      sortedData.sort((a, b) => a.averageCost - b.averageCost);
+    } else if (sortBy === "desc") {
+      sortedData.sort((a, b) => b.averageCost - a.averageCost);
+    }
+    setData(sortedData);
+  };
+
   return (
     <div className="m-4">
+      <select
+        onChange={(e) => handleSort(e.target.value)}
+        className="select select-ghost w-full max-w-xs m-4"
+      >
+        <option value="">Sort by Average Cost</option>
+        <option value="asc">Lowest to Highest</option>
+        <option value="desc">Highest to Lowest</option>
+      </select>
+
       <div className="grid gap-4 lg:grid-cols-3 md:grid-cols-2">
         {data.map((tourist) => (
           <div key={tourist._id}>

@@ -12,6 +12,8 @@ import Register from "./Firebase/Auth/Register.jsx";
 import AddTouristsSpot from "./Pages/AddTouristsSpot.jsx";
 import Error from "./Pages/Error.jsx";
 import TouristsSpotDetails from "./Pages/TouristsSpotDetails.jsx";
+import UpdateTouristsSpot from "./Pages/UpdateTouristsSpot.jsx";
+import Mylist from "./Pages/Mylist.jsx";
 
 const router = createBrowserRouter([
   {
@@ -40,6 +42,15 @@ const router = createBrowserRouter([
         element: <TouristsSpotDetails></TouristsSpotDetails>,
         loader: () => fetch("http://localhost:5000/TouristSpots"),
       },
+      {
+        path:"UpdateTouristsSpot/:id",
+        element: <UpdateTouristsSpot></UpdateTouristsSpot>
+      },
+      {
+        path:"/Mylist"
+        ,
+        element:<Mylist></Mylist>
+      }
     ],
   },
   { path: "*", element: <Error></Error> },

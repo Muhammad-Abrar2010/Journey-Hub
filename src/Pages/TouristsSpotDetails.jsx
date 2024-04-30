@@ -57,7 +57,7 @@ const TouristsSpotDetails = () => {
               </div>{" "}
               <div className="divider divider-neutral">Author Info</div>
               <div className="lg:flex md:flex grid gap-2">
-                <div className="avatar m-auto">
+                <div className="avatar m-auto lg:m-1 lg:m-1">
                   <div className="w-12 rounded-full">
                     <img src={TouristSpot.photoURL} />
                   </div>
