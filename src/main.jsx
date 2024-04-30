@@ -14,6 +14,7 @@ import Error from "./Pages/Error.jsx";
 import TouristsSpotDetails from "./Pages/TouristsSpotDetails.jsx";
 import UpdateTouristsSpot from "./Pages/UpdateTouristsSpot.jsx";
 import Mylist from "./Pages/Mylist.jsx";
+import PrivatePage from "./Pages/Home/Private/PrivatePage.jsx";
 
 const router = createBrowserRouter([
   {
@@ -43,15 +44,15 @@ const router = createBrowserRouter([
         loader: () => fetch("http://localhost:5000/TouristSpots"),
       },
       {
-        path:"UpdateTouristsSpot/:id",
-        element: <UpdateTouristsSpot></UpdateTouristsSpot>,
-        loader: ({params})=>fetch(`http://localhost:5000/TouristSpots/${params.id}`)
+        path: "UpdateTouristsSpot/:id",
+        element: <PrivatePage><UpdateTouristsSpot></UpdateTouristsSpot></PrivatePage>,
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/TouristSpots/${params.id}`),
       },
       {
-        path:"/Mylist"
-        ,
-        element:<Mylist></Mylist>
-      }
+        path: "/Mylist",
+        element: <PrivatePage><Mylist></Mylist></PrivatePage>,
+      },
     ],
   },
   { path: "*", element: <Error></Error> },
