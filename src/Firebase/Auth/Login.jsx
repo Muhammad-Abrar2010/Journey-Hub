@@ -4,7 +4,6 @@ import { useContext } from "react";
 import { Link } from "react-router-dom";
 import toast from "react-hot-toast";
 
-
 const Login = () => {
   const { SigninUser, loginGithub, loginGoogle } = useContext(AuthContext);
 
@@ -28,7 +27,7 @@ const Login = () => {
   };
   return (
     <div>
-      <div className="max-w-[800px] mx-auto my-12 p-6 bg-white shadow-md sm:px-8 sm:py-10 lg:px-12 lg:py-16">
+      <div className="max-w-[800px] mx-auto my-12 p-6 bg-auto shadow-md sm:px-8 sm:py-10 lg:px-12 lg:py-16">
         <div className="flex flex-col sm:flex-row justify-between space-x-0 sm:space-x-12">
           <div className="w-full sm:w-1/2 mb-8 sm:mb-0">
             {/* Left side form */}
@@ -49,7 +48,10 @@ const Login = () => {
                 />
               </div>
               <div className="flex items-center space-x-2 mb-6"></div>
-              <button type="submit" className="btn inline-flex items-center justify-center rounded-md text-sm font-medium  h-10 px-4 py-2 w-full bg-red-600 text-white">
+              <button
+                type="submit"
+                className="btn inline-flex items-center justify-center rounded-md text-sm font-medium  h-10 px-4 py-2 w-full bg-red-600 text-white"
+              >
                 LOG IN
               </button>
             </form>

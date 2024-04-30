@@ -11,17 +11,20 @@ import Login from "./Firebase/Auth/Login.jsx";
 import Register from "./Firebase/Auth/Register.jsx";
 import AddTouristsSpot from "./Pages/AddTouristsSpot.jsx";
 import Error from "./Pages/Error.jsx";
+import TouristsSpotDetails from "./Pages/TouristsSpotDetails.jsx";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
     children: [
-      { path: "/", element: <Home></Home>, loader:()=> fetch("http://localhost:5000/TouristSpots") },
+      {
+        path: "/",
+        element: <Home></Home>,
+      },
       {
         path: "TouristsSpot",
         element: <TouristsSpot></TouristsSpot>,
-        loader: () => fetch("http://localhost:5000/TouristSpots"),
       },
       { path: "Login", element: <Login></Login> },
       {
@@ -31,6 +34,11 @@ const router = createBrowserRouter([
       {
         path: "AddTouristsSpot",
         element: <AddTouristsSpot></AddTouristsSpot>,
+      },
+      {
+        path: "TouristSpot/:id",
+        element: <TouristsSpotDetails></TouristsSpotDetails>,
+        loader: () => fetch("http://localhost:5000/TouristSpots"),
       },
     ],
   },
