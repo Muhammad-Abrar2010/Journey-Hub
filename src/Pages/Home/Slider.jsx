@@ -30,7 +30,6 @@ export const Slider = () => {
       des: "Embark on a sea voyage and cultivate deep connections with the vast expanse of nature's embrace.",
     },
   ];
-  // if you don't want to change the slider automatically then you can just remove the useEffect
   useEffect(() => {
     const intervalId = setInterval(
       () =>

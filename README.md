@@ -1,8 +1,13 @@
-# React + Vite
+# Welcome to JorneyHub!
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+JorneyHub is your ultimate destination for unforgettable travel experiences. Explore the world with confidence and convenience.
 
-Currently, two official plugins are available:
+## Key Features:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Expert Guides:** Our experienced travel guides provide insider tips and recommendations to make your journey memorable.
+- **Customized Itineraries:** We tailor itineraries to your preferences, ensuring a personalized travel experience.
+- **24/7 Customer Support:** Our dedicated support team is available around the clock to assist you with any queries or concerns.
+- **Secure Booking:** Book your travel with confidence, knowing that your transactions are secure and protected.
+- **Explore Diverse Destinations:** From stunning beaches to historical landmarks, discover a wide range of destinations to satisfy your wanderlust.
+
+Start your journey with JorneyHub today and embark on unforgettable adventures!
