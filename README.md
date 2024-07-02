@@ -23,8 +23,8 @@ Live Page URL = https://ma-assignment10.netlify.app/
 
 Follow these steps to set up and run the project locally.
 ```text
-git clone https://github.com/your-username/your-blog-hub-project.git
-cd your-blog-hub-project          
+git clone https://github.com/Muhammad-Abrar2010/Journey-Hub.git
+cd Journey-Hub          
 npm i
 npm run dev(for live preview)
 npm run build(for production)
