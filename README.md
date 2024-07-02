@@ -13,3 +13,18 @@ JorneyHub is your ultimate destination for unforgettable travel experiences. Exp
 Start your journey with JorneyHub today and embark on unforgettable adventures!
 
 Live Page URL = https://ma-assignment10.netlify.app/
+
+## Prerequisites
+
+- [Node.js](https://nodejs.org/) (v14.18.0 or newer)
+- [npm](https://www.npmjs.com/) (v6.14.4 or newer)
+
+## Getting Started
+
+Follow these steps to set up and run the project locally.
+```text
+git clone https://github.com/your-username/your-blog-hub-project.git
+cd your-blog-hub-project          
+npm i
+npm run dev(for live preview)
+npm run build(for production)
